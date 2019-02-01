@@ -1,0 +1,12 @@
+---
+version: 1
+
+kind: experiment
+
+build:
+  image: continuumio/miniconda:4.5.11
+  build_steps:
+    - conda env update -n base -f environment.yml
+
+run:
+  cmd: python hello_world.py
